@@ -30,16 +30,16 @@ header {
 /* Styling for the Logo Links */
 header .logo a {
     margin-right: 20px;
+    display: inline-block; /* Ensures logos behave uniformly */
 }
 
 header .logo img {
     width: 40px;
-    height: 40px;
-    background-color: white; /* Ensure a background color */
-    border-radius: 50%; /* Force round shape */
-    object-fit: cover; /* Clip the image to fit within the round shape */
+    height: 40px; /* Set height for uniform size */
+    object-fit: contain; /* Ensures logos maintain their aspect ratio */
 }
 
+/* Nav bar styling */
 nav ul {
     list-style: none;
     display: flex;
@@ -50,10 +50,15 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease; /* Smooth hover transition */
 }
 
+/* Gradient hover effect */
 nav ul li a:hover {
-    color: #64FFDA;
+    background: linear-gradient(90deg, #64FFDA, #FF4081); /* Gradient like the Contact Info button */
+    color: white;
 }
 
 /* Hero Section */
