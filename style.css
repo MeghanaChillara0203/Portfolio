@@ -10,24 +10,19 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    max-width: 1200px;  /* Limit the page width */
-    margin: 0 auto;     /* Center the page content */
-    padding: 20px;      /* Add margin to the entire body */
 }
 
-/* Fixed Header with Gradient */
+/* Fixed Header with Gradient (No margin applied) */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ffffff, #e6e6e6);
+    background: linear-gradient(90deg, #ffffff, #e6e6e6); /* Gradient */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     z-index: 1000;
-    max-width: 1200px;   /* Limit the width of the header */
-    margin: 0 auto;      /* Center the header */
 }
 
 /* Styling for the Logo Links */
@@ -39,7 +34,7 @@ header .logo a {
 header .logo img {
     width: 40px;
     height: 40px;
-    object-fit: contain; /* Ensure logos maintain their aspect ratio */
+    object-fit: contain;
 }
 
 /* Nav bar styling */
@@ -66,6 +61,13 @@ nav ul li a:hover {
     text-fill-color: transparent;
 }
 
+/* Main Content with Page Margins */
+main {
+    max-width: 1200px;  /* Limit the page width */
+    margin: 0 auto;     /* Center the page content */
+    padding: 20px;      /* Add margin to the content */
+}
+
 /* Two-column hero section */
 #hero {
     display: flex;
@@ -74,11 +76,9 @@ nav ul li a:hover {
     padding-top: 150px;
     padding-bottom: 60px;
     gap: 50px;
-    max-width: 1200px;  /* Limit width of hero section */
-    margin: 0 auto;     /* Center hero content */
+    max-width: 100%;  /* Full width of the screen */
 }
 
-/* Profile Section - Left Column */
 .profile-section {
     flex: 1;
     display: flex;
@@ -91,11 +91,11 @@ nav ul li a:hover {
     height: 250px;
     object-fit: cover; /* Ensure image fits properly */
     border-radius: 50%; /* Make it a circle */
-    border: none; /* Ensure no borders */
-    box-shadow: none; /* Remove shadow */
+    border: none;
+    box-shadow: none;
 }
 
-/* Bio Section - Right Column */
+/* Bio Section */
 .bio-section {
     flex: 1;
     text-align: left;
@@ -140,10 +140,11 @@ nav ul li a:hover {
     background: linear-gradient(90deg, #FF4081, #64FFDA);
 }
 
-/* Contact Section */
+/* Contact Section (No margin applied) */
 #contact {
     padding: 60px 0;
     background-color: #E6F1FF;
+    width: 100%; /* Full width */
 }
 
 form {
@@ -176,14 +177,14 @@ form button:hover {
     color: white;
 }
 
-/* Footer Section */
+/* Footer Section (No margin applied) */
 footer {
     background-color: #0A192F;
     color: white;
     padding: 20px 0;
     font-size: 14px;
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: center;
+    width: 100%; /* Full width */
 }
 
 /* Responsive Design */
