@@ -10,6 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    padding: 0 20px; /* Adding some padding to the body for left-right margin */
 }
 
 /* Fixed Header with Gradient */
@@ -69,6 +70,8 @@ nav ul li a:hover {
     padding-top: 150px;
     padding-bottom: 60px;
     gap: 50px; /* Space between the profile photo and text */
+    max-width: 1200px; /* Add max width to prevent content from stretching too far */
+    margin: 0 auto; /* Center the content horizontally */
 }
 
 .profile-section {
@@ -81,8 +84,8 @@ nav ul li a:hover {
 .profile-photo {
     width: 250px;
     height: 250px;
-    object-fit: cover;
-    filter: blur(8px); /* Apply blur effect to smooth the edges */
+    object-fit: cover; /* Ensure image fits properly */
+    border-radius: 50%; /* Make it a circle */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add a soft shadow for more depth */
 }
 
