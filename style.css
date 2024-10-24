@@ -10,7 +10,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    text-align: center;
 }
 
 /* Fixed Header with Gradient */
@@ -19,7 +18,6 @@ header {
     top: 0;
     width: 100%;
     background: linear-gradient(90deg, #ffffff, #e6e6e6); /* Gradient */
-    background-color: #f4f4f4; /* Fallback color */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,8 +33,8 @@ header .logo a {
 
 header .logo img {
     width: 40px;
-    height: 40px; /* Uniform logo size */
-    object-fit: contain; /* Ensures logos maintain their aspect ratio */
+    height: 40px;
+    object-fit: contain; /* Ensure logos maintain their aspect ratio */
 }
 
 /* Nav bar styling */
@@ -50,62 +48,74 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
 }
 
-/* Clean hover effect - only change the text color to a gradient */
 nav ul li a:hover {
-    background: none; /* No background on hover */
-    color: transparent; /* Hide the original text */
-    background-image: linear-gradient(90deg, #b22222, #808080); /* Subtle red to grey gradient applied to text */
+    background: none;
+    color: transparent;
+    background-image: linear-gradient(90deg, #b22222, #808080);
     background-clip: text;
-    -webkit-background-clip: text; /* Ensures gradient only appears on the text */
-    -webkit-text-fill-color: transparent; /* For webkit browsers */
-    text-fill-color: transparent; /* Cross-browser support */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
 }
 
-/* Hero Section */
+/* Two-column hero section */
 #hero {
-    padding-top: 150px; /* To ensure content doesn't overlap with fixed header */
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
     padding-bottom: 60px;
+    gap: 50px; /* Space between the profile photo and text */
 }
 
 .profile-section {
+    flex: 1; /* Take up equal space for the profile photo */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .profile-photo {
     border-radius: 50%;
     border: 4px solid #64FFDA;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
+}
+
+.bio-section {
+    flex: 1; /* Take up equal space for the bio */
+    text-align: left;
+    padding: 20px;
 }
 
 #hero h2 {
     font-size: 20px;
-    margin-top: 20px;
+    margin-bottom: 10px;
     color: #333;
 }
 
 #hero h1 {
     font-size: 42px;
     color: #0A192F;
-    margin-top: 10px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
 #hero p {
     font-size: 22px;
     color: #4CAF50;
-    margin: 10px 0;
+    margin-bottom: 10px;
+}
+
+.bio-description {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .contact-button {
-    margin-top: 20px;
     padding: 10px 20px;
     background: linear-gradient(90deg, #64FFDA, #FF4081);
     color: white;
@@ -165,12 +175,17 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
+    #hero {
         flex-direction: column;
+        text-align: center;
     }
 
     .profile-photo {
         width: 150px;
         height: 150px;
+    }
+
+    .bio-section {
+        text-align: center;
     }
 }
