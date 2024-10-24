@@ -18,7 +18,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ffffff, #e6e6e6);
+    background: linear-gradient(90deg, #ffffff, #e6e6e6); /* Gradient */
+    background-color: #f4f4f4; /* Fallback color */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +34,10 @@ header .logo a {
 
 header .logo img {
     width: 40px;
-    height: auto; /* Keep the original aspect ratio */
+    height: 40px;
+    background-color: white; /* Ensure a background color */
+    border-radius: 50%; /* Force round shape */
+    object-fit: cover; /* Clip the image to fit within the round shape */
 }
 
 nav ul {
