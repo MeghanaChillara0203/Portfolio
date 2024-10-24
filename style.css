@@ -87,7 +87,6 @@ main {
 }
 
 /* Profile Image */
-/* Profile Image - Double the size */
 .profile-photo {
     width: 500px;   /* Original was 250px, now doubled */
     height: 500px;  /* Original was 250px, now doubled */
