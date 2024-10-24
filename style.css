@@ -50,19 +50,18 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-    padding: 0; /* Remove padding */
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
-/* Subtle gradient text-only hover effect */
+/* Clean hover effect - only change the text color to a gradient */
 nav ul li a:hover {
-    background: none; /* Remove any background */
-    color: transparent; /* Hide text color */
-    background-image: linear-gradient(90deg, #b22222, #808080); /* Gradient applied to text */
-    background-clip: text; /* Clip the gradient to text */
-    -webkit-background-clip: text; /* For webkit browsers */
+    background: none; /* No background on hover */
+    color: transparent; /* Hide the original text */
+    background-image: linear-gradient(90deg, #b22222, #808080); /* Subtle red to grey gradient applied to text */
+    background-clip: text;
+    -webkit-background-clip: text; /* Ensures gradient only appears on the text */
     -webkit-text-fill-color: transparent; /* For webkit browsers */
-    text-fill-color: transparent; /* Support for other browsers */
+    text-fill-color: transparent; /* Cross-browser support */
 }
 
 /* Hero Section */
