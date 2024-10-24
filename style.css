@@ -10,9 +10,9 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 0 20px; /* Adding some padding to the body for left-right margin */
-    max-width: 1200px; /* Limit the page width */
-    margin: 0 auto; /* Center the page */
+    max-width: 1200px;  /* Limit the page width */
+    margin: 0 auto;     /* Center the page content */
+    padding: 20px;      /* Add margin to the entire body */
 }
 
 /* Fixed Header with Gradient */
@@ -20,12 +20,14 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ffffff, #e6e6e6); /* Gradient */
+    background: linear-gradient(90deg, #ffffff, #e6e6e6);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     z-index: 1000;
+    max-width: 1200px;   /* Limit the width of the header */
+    margin: 0 auto;      /* Center the header */
 }
 
 /* Styling for the Logo Links */
@@ -71,28 +73,29 @@ nav ul li a:hover {
     align-items: center;
     padding-top: 150px;
     padding-bottom: 60px;
-    gap: 50px; /* Space between the profile photo and text */
-    max-width: 1200px; /* Add max width to prevent content from stretching too far */
-    margin: 0 auto; /* Center the content horizontally */
+    gap: 50px;
+    max-width: 1200px;  /* Limit width of hero section */
+    margin: 0 auto;     /* Center hero content */
 }
 
+/* Profile Section - Left Column */
 .profile-section {
-    flex: 1; /* Take up equal space for the profile photo */
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
-/* Update the profile-photo class */
+/* Profile Image */
 .profile-photo {
     width: 250px;
     height: 250px;
     object-fit: cover; /* Ensure image fits properly */
     border-radius: 50%; /* Make it a circle */
-    /* Remove box-shadow and any border */
-    box-shadow: none;
+    border: none; /* Ensure no borders */
+    box-shadow: none; /* Remove shadow */
 }
 
-/* Bio Section */
+/* Bio Section - Right Column */
 .bio-section {
     flex: 1;
     text-align: left;
@@ -179,6 +182,8 @@ footer {
     color: white;
     padding: 20px 0;
     font-size: 14px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Responsive Design */
