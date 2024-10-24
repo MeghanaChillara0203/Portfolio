@@ -52,12 +52,12 @@ nav ul li a {
     font-size: 18px;
     padding: 10px;
     border-radius: 5px;
-    transition: background 0.3s ease; /* Smooth hover transition */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth hover transition */
 }
 
-/* Gradient hover effect */
+/* Subtle red and grey gradient hover effect */
 nav ul li a:hover {
-    background: linear-gradient(90deg, #64FFDA, #FF4081); /* Gradient like the Contact Info button */
+    background: linear-gradient(90deg, #b22222, #808080); /* Subtle red to grey gradient */
     color: white;
 }
 
