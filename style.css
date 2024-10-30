@@ -10,7 +10,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    margin: 0;
 }
 
 /* Header (Navbar) */
@@ -31,7 +30,6 @@ header {
 header .logo img {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
 }
 
 nav ul {
@@ -48,16 +46,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: none;
-    color: transparent;
-    background-image: linear-gradient(90deg, #b22222, #808080);
+    background: linear-gradient(90deg, #b22222, #808080);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    color: transparent;
 }
 
-/* Main Content Section */
+/* Main Content */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -74,152 +69,15 @@ main {
     gap: 50px;
 }
 
-.profile-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-/* Profile Image */
 .profile-photo {
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: none;
-    box-shadow: none;
 }
 
-/* Bio Section */
-.bio-section {
-    flex: 1;
-    text-align: left;
-    padding: 20px;
-}
-
-#hero h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-#hero h1 {
-    font-size: 42px;
-    color: #0A192F;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-#hero p {
-    font-size: 22px;
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-.bio-description {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.contact-button {
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #64FFDA, #FF4081);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.contact-button:hover {
-    background: linear-gradient(90deg, #FF4081, #64FFDA);
-}
-
-/* About, Skills, Projects, and Other Platforms Sections */
-#about, #skills, #projects, #platforms {
-    margin: 40px 0;
-}
-
-#skills ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0;
-}
-
-#skills ul li {
-    background-color: #64FFDA;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #333;
-}
-
-/* Project Links */
-.project {
-    margin-bottom: 20px;
-}
-
-.project a {
-    color: #FF4081;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-
-/* Contact Section */
-#contact {
-    padding: 60px 20px;
-    background-color: #E6F1FF;
-    width: 100%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form input,
-form textarea {
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    background-color: #64FFDA;
-    padding: 15px;
-    border: none;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #333;
-    color: white;
-}
-
-/* Footer */
-footer {
-    background-color: #0A192F;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    width: 100%;
-}
-
-/* Responsive Design for Smaller Devices */
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Stack items vertically on mobile */
     #hero {
         flex-direction: column;
         padding-top: 100px;
@@ -232,35 +90,46 @@ footer {
         height: 150px;
     }
 
-    .bio-section {
-        text-align: center;
-    }
-
-    #hero h1 {
+    .bio-section h1 {
         font-size: 32px;
     }
+}
 
-    #hero h2,
-    #hero p,
-    .bio-description {
-        font-size: 16px;
-    }
+/* Research Section */
+#research {
+    padding: 60px 20px;
+}
 
-    nav ul {
-        gap: 15px;
-    }
+.research-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
 
-    nav ul li a {
-        font-size: 16px;
-    }
-    
-    /* Contact Section */
-    #contact {
-        padding: 40px 20px;
-    }
+.research-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
-    /* Footer */
-    footer {
-        padding: 15px 0;
-    }
+.research-content h3 {
+    font-size: 28px;
+}
+
+.research-content ul {
+    padding-left: 20px;
+}
+
+.research-image {
+    width: 300px;
+    height: auto;
+}
+
+.research-button {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: transparent;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
 }
