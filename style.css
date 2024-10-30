@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header (Navbar) */
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -47,16 +47,9 @@ nav ul li a {
 
 nav ul li a:hover {
     background: linear-gradient(90deg, #b22222, #808080);
+    color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 /* Hero Section */
@@ -74,25 +67,6 @@ main {
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #hero {
-        flex-direction: column;
-        padding-top: 100px;
-        padding-bottom: 40px;
-        gap: 20px;
-    }
-
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .bio-section h1 {
-        font-size: 32px;
-    }
 }
 
 /* Research Section */
@@ -115,10 +89,6 @@ main {
     font-size: 28px;
 }
 
-.research-content ul {
-    padding-left: 20px;
-}
-
 .research-image {
     width: 300px;
     height: auto;
@@ -132,4 +102,52 @@ main {
     border: 2px solid #333;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Contact and Footer */
+#contact, footer {
+    padding: 20px;
+    background-color: #E6F1FF;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 15px;
+    background-color: #64FFDA;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        gap: 20px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .research-item {
+        flex-direction: column;
+    }
 }
